@@ -109,6 +109,7 @@ module Deliver
       upload_screenshots.upload(options, screenshots)
       UploadPriceTier.new.upload(options)
       UploadAssets.new.upload(options) # e.g. app icon
+      UploadAvailability.new.upload(options)
     end
 
     # If options[:app_icon]/options[:apple_watch_app_icon]
